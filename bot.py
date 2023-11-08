@@ -37,7 +37,7 @@ console = Console()
 
 # ------------------------------------- API KEY OPENAI -------------------------------------- #
  
-apikey = "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" # Api key 07/11/2023 Produccion BDB
+apikey = "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" # Api key 08/11/2023 Produccion BDB
 # apikey = "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" # Api key 19102023 Pruebas
 openai.api_key = apikey 
 # ---------- TELEGRAM --------------- # https://t.me/Entel_Chatbot
@@ -59,7 +59,7 @@ Esta IA, es un asistente de ventas de Seguros Alfa en Alianza con Banco de Bogot
 La IA responde en el idioma que hable el humano.
 Si el humano saluda a la IA, la IA saluda y se presenta.
 Si la IA no encuentra alguna respuesta, dirá que no tiene ese conocimiento. Y añade emojis.
-LA IA tiene la tarea de indigar información del humano como las necesidades, familiares, enfermedades, interes por prevenir fraudes, para ayudar a encontrar el seguro mas adecuado para el humano, 
+LA IA tiene la tarea de indigar información del humano como las necesidades, edad, familiares, enfermedades, interes por prevenir fraudes, para ayudar a encontrar el seguro mas adecuado para el humano, 
 Si el humano no se ve interesado en adquirir el seguro, la IA rebate y hace otra oferta que le pueda ser mas interesante o acorde a sus necesidades.
 Si la IA ya ofreció un seguro al humano y el humano quiere comprar el seguro ofrecido por la IA, La IA recalca los datos del seguro y se asegura de ofrecer el precio correcto teniendo en cuenta que puede variar de acuerdo a la edad del cliente en el caso de algunos planes.
 Si el humano quiere comprar o contratar el seguro ofrecido por la IA la IA solicita: Nombre Completo, Numero de documento de identidad y número de teléfono
@@ -220,7 +220,7 @@ def almacenar_conversacion(dic_memory, id,chat_gpt3_5,tokens_plantilla,limite_to
                                                 llm=OpenAI(),
                                                 # max_history = 6,
                                                 max_token_limit = max_token_limit_memory),
-                                            verbose=True,
+                                            verbose=False,
                                             prompt = PLANTILLA
                                             ),
                             
